@@ -12,7 +12,7 @@ function MiApi() {
     const [search, setSearch] = useState('')
   
 
-    //Funcion Async para hacer call de Api
+    //Funcion async para hacer call de Api
     const getData = async () => {
         const res = await fetch('https://rickandmortyapi.com/api/character')
         const data = await res.json()
@@ -28,7 +28,6 @@ function MiApi() {
         <>
             <Header />
             <SearchBar setSearch={setSearch} />
-            
             <section className="container section py-4">
 
                 {db.filter((item) => item.name.includes(search)).map((item) => {
